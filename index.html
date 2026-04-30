@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <nav id="navbar">
+        <a href="https://github.com/madhav2k22" class="logo">MK.</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <!-- <a href="#experience">Experience</a> -->
+            <a href="#contact">Contact</a>
+            <a href="#" class="hire-me">Hire Me</a>
+        </div>
+        <div class="menu-btn"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span style="color:var(--accent-color)">Madhav Khanal</span></h1>
+            <h2 style="height: 40px;">I'm a <span class="typewriter" id="typewriter"></span></h2>
+            <p class="hero-tagline">Extracting hidden narratives from data noise and engineering intelligent systems to automate the future.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="madhav_resume.pdf" class="btn btn-secondary">Download CV</a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <div class="floating-blob">
+                <img src="photo.jpeg" alt="Profile">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="about-grid reveal">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600" alt="Work space">
+            </div>
+            <div class="about-text">
+                <h3>Who I Am</h3>
+<p>A passionate <strong>Machine Learning Developer & Data Analyst</strong> with a knack for turning complex data into intelligent solutions. I thrive at the intersection of statistical logic and algorithmic creativity.</p>
+
+<p style="margin-top:1rem">With a focus on data-driven impact, I specialize in building predictive models and analytical pipelines that provide seamless, actionable insights.</p>
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="1">0</span>
+                        <span>Years Exp.</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span>Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title reveal">Expertise & Toolbelt</h2>
+        <div class="skills-container reveal">
+            
+            <div class="skill-category">
+                <h3><i class="fas fa-brain" style="margin-right: 10px; color: var(--accent-color);"></i>Machine Learning</h3>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Deep Learning (TensorFlow/PyTorch)</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>NLP & Computer Vision</span><span>70%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>MLOps & Model Deployment</span><span>75%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Python (Scikit-Learn, Pandas)</span><span>72%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                </div>
+            </div>
+    
+            <div class="skill-category">
+                <h3><i class="fas fa-chart-line" style="margin-right: 10px; color: var(--accent-color);"></i>Data Analytics</h3>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Statistical Analysis & SQL</span><span>95%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="82%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Exploratory Data Analysis (EDA)</span><span>80%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="73%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Data Visualization </span><span>75%</span></div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="88%"></div></div>
+                </div>
+            </div>
+    
+            
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title reveal">Featured Projects</h2>
+        <div class="filter-buttons reveal">
+            <!-- <button class="filter-btn active" data-filter="all">All</button> -->
+            <!-- <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="design">Design</button> -->
+        </div>
+        <div class="project-grid reveal">
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <i class="fas fa-code fa-3x" style="color:var(--accent-color)"></i>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Transformer model</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <h3>Trinetra</h3>
+                    <p>Trinetra is an automated, AI-powered platform for detecting and resolving security vulnerabilities in C code.</p>
+                    <div class="hero-btns" style="margin-top:1.5rem">
+                        <a href="https://github.com/madhav2k22/Trinetra" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Github</a>
+                        <!-- <a href="#" class="btn btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.8rem;">GitHub</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="design">
+                <div class="project-img">
+                    <i class="fas fa-seedling fa-3x" style="color:var(--accent-color)"></i>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">CNN</span>
+                        <span class="tag">Tensorflow</span>
+                    </div>
+                    <h3>Plant Disease Detection</h3>
+                    <p>It is an automated, AI-powered platform for identifying and diagnosing pathological threats in crops through  leaf analysis.</p>
+                    <div class="hero-btns" style="margin-top:1.5rem">
+                        <a href="https://github.com/madhav2k22" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Github</a>
+                        <!-- <a href="#" class="btn btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Case Study</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="all">
+                <div class="project-img">
+                    <i class="fab fa-github fa-3x" style="color:var(--accent-color)"></i>
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="tag">Open Source</span>
+                        <span class="tag">More Projects</span>
+                    </div>
+                    <h3>Explore My GitHub</h3>
+                    <p>Looking for more? I have 20+ additional repositories featuring Deep Learning models, EDA notebooks, and automation scripts.</p>
+                    <div class="hero-btns" style="margin-top:1.5rem">
+                        <a href="https://github.com/madhav2k22" target="_blank" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.8rem; width: 100%; text-align: center;">
+                            See More Projects <i class="fas fa-arrow-right" style="margin-left:5px"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="experience">
+        <h2 class="section-title reveal">My Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4>Senior Web Developer</h4>
+                    <p style="color:var(--accent-color)">TechCorp Solutions | 2022 - Present</p>
+                    <ul style="margin-top: 0.5rem; margin-left: 1rem;">
+                        <li>Leading a team of 5 developers.</li>
+                        <li>Reduced page load times by 40% using SSR.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4>Full Stack Engineer</h4>
+                    <p style="color:var(--accent-color)">Creative Digital | 2020 - 2022</p>
+                    <p>Developed custom Shopify themes and scalable MERN stack applications.</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <h4>Junior Developer</h4>
+                    <p style="color:var(--accent-color)">StartUp Inc | 2019 - 2020</p>
+                    <p>Maintained legacy codebases and assisted in UI redesigns.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact">
+        <h2 class="section-title reveal">Get In Touch</h2>
+        <div class="contact-container reveal">
+            <div class="contact-info">
+                <h3>Let's collaborate</h3>
+                <p>Have a project in mind or just want to say hi? My inbox is always open.</p>
+                <div class="social-links">
+                    <a href="https://github.com/madhav2k22"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/madhav-khanal-165aa3235"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:khanalmadhav323@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; border:none;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#home" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+        <div class="footer-links" style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 2rem;">
+            <a href="#home" style="color:var(--text-dim); text-decoration: none;">Home</a>
+            <a href="#about" style="color:var(--text-dim); text-decoration: none;">About</a>
+            <a href="#projects" style="color:var(--text-dim); text-decoration: none;">Projects</a>
+        </div>
+        <p>&copy; 2026 Madhav Khanal. Designed with ❤️</p>
+    </footer>
+
+    <script>
+        // --- TYPEWRITER EFFECT ---
+        const typewriterElement = document.getElementById('typewriter');
+        const roles = ["ML Developer", "Data Analyst", "Problem Solver"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 150;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+        type();
+
+        // --- CUSTOM CURSOR ---
+        const dot = document.getElementById('cursor-dot');
+        const outline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            dot.style.left = e.clientX + 'px';
+            dot.style.top = e.clientY + 'px';
+            
+            // Outline follows with slight delay
+            setTimeout(() => {
+                outline.style.left = e.clientX - 16 + 'px';
+                outline.style.top = e.clientY - 16 + 'px';
+            }, 50);
+        });
+
+        // --- CANVAS BACKGROUND ---
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let mouse = { x: null, y: null };
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                else if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                else if (this.y < 0) this.y = canvas.height;
+
+                // Mouse interaction
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance < 100) {
+                    this.x -= dx / 20;
+                    this.y -= dy / 20;
+                }
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(188, 19, 254, 0.3)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function setupParticles() {
+            particles = [];
+            for (let i = 0; i < 100; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateCanvas);
+        }
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        window.addEventListener('resize', initCanvas);
+        initCanvas();
+        setupParticles();
+        animateCanvas();
+
+        // --- SCROLL EFFECTS ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Reveal animations on scroll
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    // Trigger Skill Bars
+                    if(entry.target.classList.contains('skills-container')) {
+                        const bars = entry.target.querySelectorAll('.skill-progress');
+                        bars.forEach(bar => bar.style.width = bar.getAttribute('data-width'));
+                    }
+
+                    // Trigger Counters
+                    if(entry.target.classList.contains('about-grid')) {
+                        const counters = entry.target.querySelectorAll('.stat-number');
+                        counters.forEach(counter => {
+                            const target = +counter.getAttribute('data-target');
+                            let count = 0;
+                            const updateCount = () => {
+                                const inc = target / 50;
+                                if(count < target) {
+                                    count += inc;
+                                    counter.innerText = Math.ceil(count);
+                                    setTimeout(updateCount, 20);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+                            updateCount();
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .timeline-item').forEach(el => observer.observe(el));
+
+        // --- PROJECT FILTERING ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- TESTIMONIAL SLIDER ---
+        const track = document.querySelector('.testimonial-track');
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % 2;
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }, 5000);
+
+        // --- CONTACT FORM ---
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("Thanks for reaching out! (Form simulation complete)");
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
