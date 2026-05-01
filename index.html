@@ -27,7 +27,7 @@
             <a href="#projects">Projects</a>
             <!-- <a href="#experience">Experience</a> -->
             <a href="#contact">Contact</a>
-            <a href="#" class="hire-me">Hire Me</a>
+            <!-- <a href="#" class="hire-me">Hire Me</a>  -->
         </div>
         <div class="menu-btn"><i class="fas fa-bars"></i></div>
     </nav>
@@ -452,6 +452,38 @@
             alert("Thanks for reaching out! (Form simulation complete)");
             e.target.reset();
         });
+
+    
+        // --- MOBILE MENU LOGIC ---
+// --- MOBILE MENU FUNCTIONALITY ---
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+const menuIcon = document.querySelector('.menu-btn i');
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        // Toggle the 'active' class on the menu
+        navLinks.classList.toggle('active');
+        
+        // Toggle the icon between bars and X
+        if (navLinks.classList.contains('active')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+        } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        }
+    });
+}
+
+// Close the menu automatically when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+    });
+});
     </script>
 </body>
 </html>
