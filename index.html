@@ -223,17 +223,19 @@
                     <a href="mailto:khanalmadhav323@gmail.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            <form id="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/xqendopk" method="POST">
+                
                 <div class="form-group">
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name="Full Name" required>
                     <label for="name">Your Name</label>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" required>
+                    <input type="email" name="Email" id="email" required>
                     <label for="email">Email Address</label>
                 </div>
+          
                 <div class="form-group">
-                    <textarea id="message" rows="5" required></textarea>
+                    <textarea name="Message" id="message" rows="5" required></textarea>
                     <label for="message">Message</label>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width:100%; border:none;">Send Message</button>
@@ -447,10 +449,50 @@
         }, 5000);
 
         // --- CONTACT FORM ---
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert("Thanks for reaching out! (Form simulation complete)");
-            e.target.reset();
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', async function(event) {
+            event.preventDefault(); 
+            
+            const button = contactForm.querySelector('button');
+            const originalButtonText = button.innerHTML;
+            
+           
+            button.innerHTML = "Sending...";
+            button.disabled = true;
+        
+           
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+        
+            try {
+                
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
+        
+                if (response.ok) {
+                    
+                    alert("Thank you! Your message has been sent successfully.");
+                    contactForm.reset(); // Clears the form
+                } else {
+                    // 5. Formspree error
+                    const errorData = await response.json();
+                    alert("Error: " + (errorData.error || "Something went wrong. Please try again."));
+                }
+            } catch (error) {
+                
+                alert("Could not connect to the server. Please check your internet.");
+            } finally {
+                
+                button.innerHTML = originalButtonText;
+                button.disabled = false;
+            }
         });
 
     
@@ -484,6 +526,8 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         menuIcon.classList.add('fa-bars');
     });
 });
+
+
     </script>
 </body>
 </html>
