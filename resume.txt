@@ -1,0 +1,66 @@
+Madhav Khanal
+§ madhav2k22 | ï madhav-khanal | # khanalmadhav323@gmail.com | H +977-9867726632
+
+Summary
+AI/ML Developer and Data Scientist with experience in machine learning projects. Skilled in Python, C,
+Java, FastAPI, and TensorFlow/Keras. Passionate about building AI-powered applications and delivering
+production-ready solutions.
+
+Work Experience
+Data Science Intern (Training Program) — Fusemachines Nepal
+
+2024
+
+Performed data cleaning, preprocessing, and exploratory data analysis (EDA) on real-world datasets using
+Python. Built and evaluated machine learning models using statistical and supervised learning techniques,
+applied feature engineering, and visualized insights to support data-driven decision making. Collaborated
+in an industry-oriented environment to understand business problems and translate them into data science
+solutions.
+
+Projects
+Exploratory Data Analysis on Real Datasets
+
+Link to Demo
+
+Executed end-to-end EDA on the Titanic and Flight datasets using Python (Pandas, Seaborn, Matplotlib).
+Performed univariate and bivariate analysis to identify outliers and missing patterns, and utilized multivariate techniques like correlation matrices to detect interaction effects
+Trinetra – Automated Security Vulnerability Detection
+
+Link to Demo
+
+An AI-powered platform developed to identify and remediate security vulnerabilities in C programs.
+The system features a full-stack architecture using React and an asynchronous FastAPI backend with
+secure authentication and admin management.Performed functional, API, and UI testing; designed test
+cases, reported bugs, and conducted regression and performance testing to ensure system reliability and
+accuracy..
+FakeNews Detection
+
+Link to Demo
+
+Built an end-to-end NLP Fake News Detector using Python. Implemented text preprocessing (tokenization, stop-word removal) and TF-IDF vectorization to train classification models. Successfully identified
+deceptive linguistic patterns, achieving high model accuracy
+
+Education
+2021 - 2025
+2020
+2017
+
+Bachelor of Software Engineering Degree at Nepal College of Information Technology
+(GPA: 3.57/4.0)
+Class 12th NEB
+(3.47)
+Class 10th NEB
+(3.60)
+
+Skills
+Programming Languages
+Web Technologies
+AI / Machine Learning
+Frameworks & Libraries
+
+C, C++, Python, Java
+FastAPI, REST APIs, TailwindCSS, HTML, CSS
+CNNs, Transformers, Deep Learning, Model Evaluation, Data Preprocessing
+TensorFlow, Keras, PyTorch, SQLAlchemy, Pydantic
+
+
