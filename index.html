@@ -39,7 +39,7 @@
             <p class="hero-tagline">Extracting hidden narratives from data noise and engineering intelligent systems to automate the future.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="madhav_resume.pdf" class="btn btn-secondary">Download CV</a>
+                <a href="resume.pdf" class="btn btn-secondary">Download CV</a>
             </div>
         </div>
         <div class="hero-img">
@@ -250,8 +250,37 @@
             <a href="#about" style="color:var(--text-dim); text-decoration: none;">About</a>
             <a href="#projects" style="color:var(--text-dim); text-decoration: none;">Projects</a>
         </div>
-        <p>&copy; 2026 Madhav Khanal. Designed with ❤️</p>
+        <p>&copy; 2026 Madhav Khanal.</p>
     </footer>
+
+    <div id="ai-chat-wrapper">
+        <div id="ai-chat-window" class="chat-hidden">
+            <div class="chat-header">
+                <div class="header-info">
+                    <i class="fas fa-robot" style="color: var(--accent-color);"></i>
+                    <span>Madhav's AI</span>
+                </div>
+                <button id="close-chat"><i class="fas fa-times"></i></button>
+            </div>
+    
+            <div id="chat-body">
+                <div class="message bot">
+                    Hi! I'm Madhav's digital twin. Ask me about his ML projects, data expertise, or his hobbies!
+                </div>
+            </div>
+    
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Ask me anything...">
+                <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    
+        <button id="chat-trigger">
+            <div class="icon-container">
+                <i class="fas fa-comment-dots"></i>
+            </div>
+        </button>
+    </div>
 
     <script>
         // --- TYPEWRITER EFFECT ---
@@ -527,7 +556,78 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+// --- AI CHATBOT LOGIC ---
+const chatTrigger = document.getElementById('chat-trigger');
+const chatWindow = document.getElementById('ai-chat-window');
+const chatClose = document.getElementById('close-chat');
+const chatInput = document.getElementById('chat-input');
+const chatSend = document.getElementById('send-btn');
+const chatBody = document.getElementById('chat-body');
 
-    </script>
+// Toggle Chat Window
+chatTrigger.addEventListener('click', () => {
+    chatWindow.classList.toggle('chat-hidden');
+});
+
+chatClose.addEventListener('click', () => {
+    chatWindow.classList.add('chat-hidden');
+});
+
+// Function to handle sending message
+async function handleChat() {
+    const userMessage = chatInput.value.trim();
+    if (!userMessage) return;
+
+    // Add user message
+    appendChatMessage(userMessage, 'user');
+
+    chatInput.value = '';
+
+    // Loading message
+    const loadingMsg = appendChatMessage("Thinking...", 'bot');
+
+    try {
+
+        // WRITE fetch() HERE
+        const response = await fetch('http://localhost:3000/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: userMessage
+            })
+        });
+
+        const data = await response.json();
+
+        loadingMsg.innerText = data.reply;
+
+    } catch (error) {
+
+        loadingMsg.innerText =
+            "AI assistant unavailable.";
+
+        console.error(error);
+    }
+}
+
+function appendChatMessage(text, sender) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `message ${sender}`;
+    msgDiv.innerText = text;
+    chatBody.appendChild(msgDiv);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    return msgDiv;
+}
+
+// Event Listeners
+chatSend.addEventListener('click', handleChat);
+chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleChat();
+});
+
+
+</script>
 </body>
 </html>
