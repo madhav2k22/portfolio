@@ -6,7 +6,9 @@ const chatRoute = require("./api/chat");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: "http://khanal-madhav.com.np"
+}));
 app.use(express.json());
 
 app.use("/api/chat", chatRoute);
