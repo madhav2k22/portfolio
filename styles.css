@@ -111,17 +111,6 @@ nav.scrolled {
     color: var(--accent-color);
 }
 
- /* .hire-me {
-    padding: 0.6rem 1.5rem;
-    border: 2px solid var(--accent-color);
-    border-radius: 50px;
-    color: var(--text-main);
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 10px var(--accent-glow);
-    animation: glowPulse 2s infinite;
-}  */
 
 @keyframes glowPulse {
     0% { box-shadow: 0 0 5px var(--accent-glow); }
@@ -749,4 +738,39 @@ footer {
 
 .chat-hidden {
     display: none !important;
+}
+
+
+@media (max-width: 768px) {
+
+    #ai-chat-wrapper {
+        right: 12px;
+        bottom: 12px;
+        
+    }
+
+    #ai-chat-window {
+        width: calc(100vw - 24px);
+        height: 75vh;
+        max-height: 650px;
+        border-radius: 18px;
+        left:09px;
+    }
+
+    .message {
+        max-width: 90%;
+        font-size: 0.9rem;
+    }
+
+    #chat-input {
+        font-size: 16px;
+    }
+
+    .chat-header {
+        padding: 0.9rem;
+    }
+
+    .chat-footer {
+        padding: 0.8rem;
+    }
 }
